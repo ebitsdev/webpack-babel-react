@@ -1,3 +1,4 @@
+import './assets/css/styles.css';
 const citiesGuinea = {
     cityName: 'Lola',
     regionName: 'South East Guinea',
@@ -11,6 +12,11 @@ const otherGuineanCities = {
     regionName: 'South East Guinea',
     specificities: [
         'Large', 'old', 'central'
+    ],
+    cityName: 'Yomou',
+    regionName: 'South East Guinea',
+    specificities: [
+        'Southmost', 'Greener', 'wonderful',
     ]
 }
 const logIt = (txt) => {
@@ -19,3 +25,4 @@ const logIt = (txt) => {
 
 logIt(citiesGuinea)
 logIt(otherGuineanCities)
+logIt('Testing this');
