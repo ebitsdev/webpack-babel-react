@@ -1,4 +1,4 @@
-import './assets/css/styles.css';
+import './assets/css/index.scss';
 const citiesGuinea = {
     cityName: 'Lola',
     regionName: 'South East Guinea',
