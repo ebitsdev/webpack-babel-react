@@ -2,7 +2,11 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+/*
+last 2 versions
+> 0.5%
+IE 10
+*/
 let mode = "development";
 let target = "web";
 const plugins = [
@@ -44,8 +48,9 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
-        // watchContentBase: true,
+        watchContentBase: true,
         port: 4500,
+        inline: true,
         hot: true, //hot reloading for development
     },
     plugins: plugins,

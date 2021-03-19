@@ -16,13 +16,20 @@ const otherGuineanCities = {
     cityName: 'Yomou',
     regionName: 'South East Guinea',
     specificities: [
-        'Southmost', 'Greener', 'wonderful',
+        'Southmost', 'Greener', 'Excellent',
     ]
 }
 const logIt = (txt) => {
+    if(typeof txt === 'object'){
+        for (const city in txt) {
+            console.log(txt[city])
+        }
+    } 
+    if (typeof txt === 'string'){
     console.log(txt)
+    }
 }
 
 logIt(citiesGuinea)
 logIt(otherGuineanCities)
-logIt('Testing this');
+logIt('Emmanuel Bamba');
