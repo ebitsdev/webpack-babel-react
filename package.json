@@ -46,6 +46,7 @@
     "d3": "^6.6.0",
     "html-webpack-root-plugin": "^0.10.0",
     "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.1",
     "react-inlinesvg": "^2.2.2",
     "react-svg-loader": "^3.0.3",

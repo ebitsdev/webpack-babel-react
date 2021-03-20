@@ -17,11 +17,13 @@ const plugins = [
   }),
 ];
 
-if (process.env.NODE_ENV === 'production'){
-    mode = 'production'
-}
 module.exports = {
-    mode: mode,    
+    mode: mode,  
+    target: target,
+    entry: {    
+        polyfill: './src/polyfill.js',      
+        index: './src/index.js',         
+    },  
     module: {
         rules: [
             {
