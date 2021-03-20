@@ -25,3 +25,11 @@ svg {
     border: 1px solid black;
     margin: 0 auto 5px;
   }
+  .gauge-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    width: 100%;
+  }
