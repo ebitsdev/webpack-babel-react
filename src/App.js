@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import BarChart from './components/Barchart';
 import GaugeChart from './components/GaugeChart';
+import FamilyTree from './components/FamilyTree';
 
 function App() {
     const gaugeRef = useRef();
@@ -9,9 +10,9 @@ function App() {
   
   return (
     <React.Fragment>
-        <GaugeChart data={gaugeData} />    
-        <BarChart data={data} />
-        <div className="gauge-container" ref={gaugeRef} style={{ transform: "scale(-1, 1)" }} width="300" height="300"/>    
+        {/* <GaugeChart data={gaugeData} />     */}
+        {/* <BarChart data={data} /> */}
+        {/* <div className="gauge-container" ref={gaugeRef} style={{ transform: "scale(-1, 1)" }} width="300" height="300"/>     */}
         {/* <button onClick={() => setData(data.map((value) => value + 5))}>
               Update data
             </button>

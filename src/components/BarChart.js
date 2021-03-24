@@ -9,11 +9,7 @@ function BarChart({ data }) {
   // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);
-    // console.log(svg._groups[0]);
-    // console.log(dimensions);
-    // svg._groups[0].map((item) =>{
-    //   return console.log(item.clientHeight, item.clientWidth);
-    // })
+ 
     if (!dimensions) return;
 
     // scales
