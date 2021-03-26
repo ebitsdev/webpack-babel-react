@@ -3,7 +3,7 @@ import * as d3 from "d3";
 export default function PieChart(){
     const width = 750;
     const height = 500;
-    const colors = d3.scaleOrdinal(d3.schemeDark2);
+    const colors = d3.scaleOrdinal(d3.schemeCategory10);
     const svg = d3.select('body').append('svg')
                   .attr('width', width)
                   .attr('height', height)
@@ -36,9 +36,9 @@ export default function PieChart(){
             .attr("d", segments)
             .attr("fill", (d) => colors(d.data.number))
     const content = d3
-                        .select("g")
-                        .selectAll("text")
-                        .data(data);
+                    .select("g")
+                    .selectAll("text")
+                    .data(data);
         content
                 .enter()
                 .append("text")
@@ -46,10 +46,10 @@ export default function PieChart(){
                 .each(function(d) {
                     const center = segments.centroid(d)
                     d3
-                        .select(this)
-                        .attr("x", center[0])
-                        .attr("y", center[1])
-                        .text(d.data.number)
+                      .select(this)
+                      .attr("x", center[0])
+                      .attr("y", center[1])
+                      .text(d.data.number)
                         
                 });
     let legends = svg.append("g").attr("transform","translate(500, 140)")
