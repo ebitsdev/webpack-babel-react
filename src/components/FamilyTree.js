@@ -17,7 +17,6 @@ export default function FamilyTree(){
     // From here: https://youtu.be/1DUv_OS59Uc?list=PLf1qCOLSl4H38Qp0J5UQpli7_pCnd_JpI
     let svg = d3.select("body")
                 .append("svg")
-                .attr("viewBox", 900, 600)
                 .attr("width", 900)
                 .attr("height", 600)
                 .append("g")
