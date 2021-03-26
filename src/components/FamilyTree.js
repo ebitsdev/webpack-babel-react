@@ -9,7 +9,6 @@ export default function FamilyTree(){
     .then(data => {
         const parent = data.map((d, i) => Object.assign(d, {id: d.id}))
                             .map(d => Object.assign(d, {id: d.id, parentId: d.parent}))
-        console.log(parent);
     })
     .catch(err => {
         console.log(err);
@@ -87,8 +86,7 @@ export default function FamilyTree(){
                        .style("stroke", "#ccc")
                        .style("stroke-width", 2)
                        .style("width", "80px")
-                       .style("height", "40px")
-                                              
+                       .style("height", "40px")                           
 
         let names = svg
                         .append("g")
@@ -103,6 +101,5 @@ export default function FamilyTree(){
                         .attr("x", function(d) { return d.x;})
                         .attr("y", function(d) { return d.y;})
                         .classed('bigger', true)
-
 }
 FamilyTree();
