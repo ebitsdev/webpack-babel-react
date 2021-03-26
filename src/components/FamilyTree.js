@@ -1,18 +1,18 @@
 import * as d3 from "d3";
 
 export default function FamilyTree(){
-    const headers = new Headers();
+    // const headers = new Headers();
 
-    headers.append('Accept','application/json');
-    fetch('http://localhost:1337/people', headers )
-    .then(response => response.json())
-    .then(data => {
-        const parent = data.map((d, i) => Object.assign(d, {id: d.id}))
-                            .map(d => Object.assign(d, {id: d.id, parentId: d.parent}))
-    })
-    .catch(err => {
-        console.log(err);
-    })
+    // headers.append('Accept','application/json');
+    // fetch('http://localhost:1337/people', headers )
+    // .then(response => response.json())
+    // .then(data => {
+    //     const parent = data.map((d, i) => Object.assign(d, {id: d.id}))
+    //                         .map(d => Object.assign(d, {id: d.id, parentId: d.parent}))
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    // })
     // From here: https://youtu.be/1DUv_OS59Uc?list=PLf1qCOLSl4H38Qp0J5UQpli7_pCnd_JpI
     let svg = d3.select("body")
                 .append("svg")

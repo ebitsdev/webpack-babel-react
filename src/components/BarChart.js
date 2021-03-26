@@ -74,7 +74,7 @@ function BarChart({ data }) {
   }, [data, dimensions]);
 
   return (
-    <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+    <div className="bar-chart" ref={wrapperRef} style={{ marginBottom: "2rem" }}>
       <svg ref={svgRef}>
         <g className="x-axis" />
         <g className="y-axis" />

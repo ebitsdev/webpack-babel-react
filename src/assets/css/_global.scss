@@ -1,11 +1,6 @@
 @use "variables";
 
 svg {
-    background: #eee;
-}
-
-svg {
-    background: rgb(231, 219, 219);
     overflow: visible;
     display: block;
     width: 100%;
@@ -16,8 +11,8 @@ svg {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    height: 100vh;
-    padding: 0 50px;
+    height: 100%;
+    // padding: 0 50px;
   }
   
   button {
@@ -25,14 +20,7 @@ svg {
     border: 1px solid black;
     margin: 0 auto 5px;
   }
-  .gauge-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-    width: 100%;
-  }
+
   // Set rectangle text styles for the family tree
   .bigger{
     font-family: "Oswald";
