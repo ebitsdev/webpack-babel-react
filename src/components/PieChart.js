@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 
 export default function PieChart(){
-    const width = 600;
+    const width = 750;
     const height = 500;
     const colors = d3.scaleOrdinal(d3.schemeDark2);
     const svg = d3.select('body').append('svg')
@@ -52,31 +52,22 @@ export default function PieChart(){
                         .text(d.data.number)
                         
                 });
-    const legends = svg
-                        .append("g")
-                        .attr("transform", "translate(500, 200)")
-                        .selectAll(".legends")
-                        .data(data);
-    const legend = legends
-                          .enter()
-                          .append("g")
-                          .classed("legends", true)
-                          .attr("transform", (d, i) => {
-                              "translate(0," + (i+1) * 30 + ")";}); // We use 30 because we want the squares in the legends to have 20px size
-     legend
-            .append("rect")
-            .attr("width", 20)
-            .attr("height", 20)
-            .attr("fill", (d) => colors(d.data.number));  
-    legend
-            .append("text")
-            .classed("pielabel", true)
-            .text((d => d.data.grade))
-            .attr("fill", (d) => colors(d.data.number))
-            .attr("x", 30)
-            .attr("y", 20)
-
-
-
+    let legends = svg.append("g").attr("transform","translate(500, 140)")
+                      .selectAll(".legends").data(data);
+    let legend =  legends.enter().append("g").attr("class", "legends")
+                          .attr("transform", function(d, i){
+                              return "translate(0,"+(i+1)*30+")"
+                          })
+        legend.append("rect").attr("width", 20)
+                             .attr("height", 20)
+                             .attr("fill", function(d) { 
+                                 return colors(d.data.number);
+                                });
+        legend.append("text")
+              .attr("class", "pielabel")
+              .text(function(d) { return d.data.grade; })
+              .attr("fill", function(d) { return colors(d.data.number);})
+              .attr("x", 25)
+              .attr("y", 19)
 }
 PieChart();
