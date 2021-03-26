@@ -43,6 +43,7 @@ export default function OrgChart({data}) {
     rectangles
       .enter()
       .append("rect")
+      .attr("class", "org-rect")
       .attr("x", (d) => d.x - 40)
       .attr("y", (d) => d.y - 20)
       .style("fill", "#cec")

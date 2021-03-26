@@ -25,6 +25,8 @@ svg {
   .bigger{
     font-family: "Oswald";
     font-size: 16px;
+    dominant-baseline: "middle";
+    text-anchor: "middle"
   }
   .pietext{
     font-size: 15px;
