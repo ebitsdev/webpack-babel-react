@@ -62,7 +62,7 @@ export default function FamilyTree(){
     let treeStructure = d3.tree()
                           .size([850, 300]);
     let information = treeStructure(dataStructure);
-    console.log(information.descendants());
+    // console.log(information.descendants());
     // Draw the path before appending the rectangles
     let connections = svg.append("g")
     .selectAll("path")

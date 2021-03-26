@@ -19,7 +19,7 @@ export default function PieChart(){
     ]
     const data = d3.pie().sort(null).value((d => d.number))
                 (grades)
-    console.log(data);
+  
     const segments = d3.arc()
                         .innerRadius(0)
                         .outerRadius(200)
