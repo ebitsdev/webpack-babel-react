@@ -49,11 +49,11 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: './dist',
-        watchContentBase: true,
+        // contentBase: './dist',
+        watchFiles: './dist',
         port: 4500,
-        inline: true,
-        hot: true, //hot reloading for development
+        // inline: true,
+        liveReload: true, //hot reloading for development
     },
     plugins: plugins,
 }
